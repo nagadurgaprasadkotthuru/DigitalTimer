@@ -26,13 +26,13 @@ class DigitalTimer extends Component {
         minsCounter: prevState.timerLimit,
         secsCounter: 0,
       }))
-      this.timerID = setInterval(this.onDecrementSeconds, 1)
+      this.timerID = setInterval(this.onDecrementSeconds, 1000)
     } else {
       this.setState({
         isRunning: true,
         isReset: false,
       })
-      this.timerID = setInterval(this.onDecrementSeconds, 1)
+      this.timerID = setInterval(this.onDecrementSeconds, 1000)
     }
   }
 
